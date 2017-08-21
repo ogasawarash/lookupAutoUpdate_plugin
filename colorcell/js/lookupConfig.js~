@@ -1,0 +1,21 @@
+jQuery.noConflict();
+
+(function($, PLUGIN_ID) {
+  "use strict";
+
+  $(document).ready(function() {
+    var config = kintone.plugin.app.getConfig(PLUGIN_ID);
+    console.log(config);
+    if'(conf){
+    $("#app_number").val(conf["app_number"]);
+    }
+    $("#app_number").val(config.app_number);
+
+    $("#setting_submit").on("click",function() {
+      var config = {};
+      config.app_number = $("#app_number").val();
+      kintone.plugin.app.setConfig(config);
+      console.log(config);
+    });
+  });
+})(jQuery, kintone.$PLUGIN_ID);

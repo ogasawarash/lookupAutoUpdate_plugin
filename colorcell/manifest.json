@@ -1,0 +1,32 @@
+{
+    "manifest_version": 1,
+    "version": 1,
+    "type": "APP",
+    "name": {
+        "ja": "ルックアップ自動更新プラグイン",
+        "en": "Vote Extension",
+        "zh": "Vote Extension"
+    },
+    "description": {
+        "ja": "ルックアップで参照している値に変更があった場合、自動的に値を更新します。",
+        "en": "Add the vote extension to application.",
+        "zh": "Add the vote extension to application."
+    },
+    "icon": "image/updateIcon.png",
+    "desktop": {
+        "js": [
+            "https://js.cybozu.com/jquery/jquery-1.11.0.min.js",
+            "js/lookup_autoUpdate.js"
+        ]
+    },
+    "config": {
+        "html": "html/config.html",
+        "js": [
+            "https://js.cybozu.com/jquery/jquery-1.11.0.min.js",
+            "js/lookupConfig.js"
+        ],
+        "css": [
+            "css/51-current-default.css"
+        ]
+    }
+}
